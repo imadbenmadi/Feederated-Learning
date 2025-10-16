@@ -17,7 +17,7 @@ cd c:\Users\imadb\OneDrive\Bureau\ostds
 
 ---
 
-## 🛑 **TO STOP THE APP:**
+## **TO STOP THE APP:**
 
 ### **Option 1: Double-Click (Easiest)**
 
@@ -36,7 +36,7 @@ cd c:\Users\imadb\OneDrive\Bureau\ostds
 
 ---
 
-## 📋 **WHAT EACH ONE DOES:**
+## **WHAT EACH ONE DOES:**
 
 ### **RUN.bat starts:**
 
@@ -54,13 +54,13 @@ cd c:\Users\imadb\OneDrive\Bureau\ostds
 
 ### **STOP.bat stops:**
 
-1. 🛑 All Python services (Global Server, Kafka Producer, Flink, Spark)
-2. 🛑 Kafka containers (Kafka, Zookeeper, Kafka UI)
-3. 🛑 MongoDB container
+1.  All Python services (Global Server, Kafka Producer, Flink, Spark)
+2.  Kafka containers (Kafka, Zookeeper, Kafka UI)
+3.  MongoDB container
 
 ---
 
-## 🎯 **SIMPLE WORKFLOW:**
+## **SIMPLE WORKFLOW:**
 
 ```
 1. Make sure Docker Desktop is running (green icon in system tray)

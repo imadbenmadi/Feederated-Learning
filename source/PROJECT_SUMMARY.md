@@ -8,7 +8,7 @@ This is a **complete, production-ready IoT data streaming and machine learning p
 
 ---
 
-## 📁 Project Structure Created
+## Project Structure Created
 
 ### 1. **Data Pipeline** ✅
 
@@ -123,7 +123,7 @@ This is a **complete, production-ready IoT data streaming and machine learning p
 
 ---
 
-## 🎯 Key Features Implemented
+## Key Features Implemented
 
 ### Federated Learning
 
@@ -200,7 +200,7 @@ python spark/spark_batch_analysis.py
 
 ---
 
-## 📊 What Data Flows Through
+## What Data Flows Through
 
 1. **Input**: Intel Lab IoT sensor data (2.3M records)
 
@@ -252,7 +252,7 @@ python spark/spark_batch_analysis.py
 
 ---
 
-## 📈 Performance Characteristics
+## Performance Characteristics
 
 -   **Throughput**: 100 records/second (configurable)
 -   **Latency**: <100ms per prediction
@@ -263,7 +263,7 @@ python spark/spark_batch_analysis.py
 
 ---
 
-## 🔧 Customization Points
+## Customization Points
 
 Users can easily customize:
 

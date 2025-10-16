@@ -72,7 +72,7 @@ python kafka\kafka_consumer_test.py
 
 ---
 
-## 🌐 **Then Your URLs Will Work:**
+## **Then Your URLs Will Work:**
 
 -   http://localhost:8080 (Kafka UI)
 -   http://localhost:8000/docs (API Docs)

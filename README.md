@@ -6,7 +6,7 @@ A comprehensive end-to-end IoT data processing and analytics pipeline that simul
 
 ![Architecture Diagram](architecture_diagram.png)
 
-## 📋 Table of Contents
+## Table of Contents
 
 -   [Overview](#overview)
 -   [Architecture](#architecture)
@@ -22,7 +22,7 @@ A comprehensive end-to-end IoT data processing and analytics pipeline that simul
 -   [Contributing](#contributing)
 -   [License](#license)
 
-## 🎯 Overview
+## Overview
 
 This project implements a complete IoT analytics pipeline with the following capabilities:
 
@@ -32,7 +32,7 @@ This project implements a complete IoT analytics pipeline with the following cap
 -   **Data Storage**: MongoDB for flexible document storage
 -   **Visualization**: Apache Superset for interactive dashboards
 
-## 🏗️ Architecture
+## Architecture
 
 ### System Components
 
@@ -87,7 +87,7 @@ MongoDB Storage
 Apache Superset (Visualization)
 ```
 
-## ✨ Features
+## Features
 
 -   **Continuous Streaming**: Automatically loops dataset to simulate real-time IoT data
 -   **Dynamic Device Handling**: Automatically creates models for new devices
@@ -98,31 +98,9 @@ Apache Superset (Visualization)
 -   **Scalable Architecture**: Modular design for easy expansion
 -   **Comprehensive Monitoring**: Logs, metrics, and visualizations
 
-## 📦 Prerequisites
-
-### Software Requirements
-
--   **Python**: 3.8 or higher
--   **Docker**: 20.10 or higher (for Kafka)
--   **MongoDB**: 4.4 or higher
--   **Java**: 11 or higher (for Flink/Spark)
--   **Apache Flink**: 1.17 or higher (optional)
--   **Apache Spark**: 3.4 or higher (optional)
-
-### Hardware Requirements
-
--   **RAM**: Minimum 8GB, recommended 16GB
--   **CPU**: Minimum 4 cores
--   **Storage**: 10GB free space
-
 ## Installation
 
 ### 1. Clone the Repository
-
-```bash
-git clone <repository-url>
-cd source
-```
 
 ### 2. Create Virtual Environment
 
@@ -137,7 +115,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Install Docker (if not already installed)
+### 4. Install Docker
 
 Follow instructions at: https://docs.docker.com/get-docker/
 
@@ -161,7 +139,7 @@ tar -xzf spark-3.4.0-bin-hadoop3.tgz
 export SPARK_HOME=/path/to/spark-3.4.0
 ```
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Step 1: Download and Preprocess Data
 
@@ -228,7 +206,7 @@ cd visualization
 
 Access Superset: http://localhost:8088
 
-## 📚 Components
+## Components
 
 ### Data Processing
 
@@ -273,7 +251,7 @@ Access Superset: http://localhost:8088
 -   **superset_setup.sh**: Superset installation
 -   **dashboards/**: Dashboard configurations
 
-## 🔧 Configuration
+## Configuration
 
 ### Project Configuration
 
@@ -301,7 +279,7 @@ Edit `kafka/config/kafka_config.json` for:
 -   Topic settings
 -   Producer/consumer parameters
 
-## 📊 Monitoring
+## Monitoring
 
 ### Kafka UI
 
@@ -338,7 +316,7 @@ use iot_analytics
 db.predictions.find().limit(10)
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Kafka Connection Issues
 
@@ -376,35 +354,9 @@ ls -la models/global_model/
 -   Decrease Flink parallelism
 -   Limit Kafka retention
 
-## 📈 Performance Tips
 
-1. **Increase Kafka Partitions**: Improves parallel processing
-2. **Adjust Model Update Frequency**: Balance accuracy vs. overhead
-3. **Tune Aggregation Interval**: Balance freshness vs. computational cost
-4. **Use Appropriate Hardware**: More RAM/CPU for better performance
 
-## 🤝 Contributing
 
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📮 Contact
-
-For questions or support, please open an issue on GitHub.
-
-## 🙏 Acknowledgments
-
--   Intel Lab for the IoT dataset
--   Apache Foundation for Kafka, Flink, Spark, and Superset
--   MongoDB team for the database system
 
 ## 📖 References
 

@@ -32,7 +32,7 @@ The preprocessing script has been fixed to handle the Intel Lab data format corr
 
 ## Step-by-Step Setup (Windows)
 
-### Step 1: Install Python Packages ⚡
+### Step 1: Install Python Packages
 
 ```powershell
 # Navigate to project directory
@@ -42,7 +42,7 @@ cd C:\Users\imadb\OneDrive\Bureau\ostds\source
 pip install numpy pandas kafka-python pymongo fastapi uvicorn pydantic requests schedule pyyaml python-dotenv
 ```
 
-### Step 2: Start Docker Desktop ⚡
+### Step 2: Start Docker Desktop
 
 1. **Open Docker Desktop** from Start Menu
 2. **Wait** until you see "Docker Desktop is running"
@@ -52,7 +52,7 @@ pip install numpy pandas kafka-python pymongo fastapi uvicorn pydantic requests 
     docker ps
     ```
 
-### Step 3: Install and Start MongoDB ⚡
+### Step 3: Install and Start MongoDB
 
 **Option A: Install MongoDB Community Edition**
 
@@ -79,7 +79,7 @@ mongosh
 mongo
 ```
 
-### Step 4: Re-process Data ⚡
+### Step 4: Re-process Data
 
 ```powershell
 # Clean up old data
@@ -99,7 +99,7 @@ Expected output:
 ✓ Final dataset: ~150000 valid records
 ```
 
-### Step 5: Start Kafka ⚡
+### Step 5: Start Kafka
 
 ```powershell
 cd kafka
@@ -110,13 +110,13 @@ cd ..
 
 Verify at: http://localhost:8080
 
-### Step 6: Initialize MongoDB ⚡
+### Step 6: Initialize MongoDB
 
 ```powershell
 python storage\mongodb_init.py
 ```
 
-### Step 7: Start Services ⚡
+### Step 7: Start Services
 
 **Terminal 1 - Global Server:**
 

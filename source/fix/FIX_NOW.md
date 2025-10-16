@@ -1,4 +1,4 @@
-# 🔧 IMMEDIATE FIX GUIDE
+# IMMEDIATE FIX GUIDE
 
 ## Your Current Issues:
 
@@ -11,7 +11,7 @@
 
 ## QUICK FIX (5 Steps)
 
-### Step 1: Run the Fix Script ⚡
+### Step 1: Run the Fix Script
 
 ```powershell
 cd C:\Users\imadb\OneDrive\Bureau\ostds\source
@@ -22,7 +22,7 @@ cd C:\Users\imadb\OneDrive\Bureau\ostds\source
 
 ---
 
-### Step 2: Install Missing Packages ⚡
+### Step 2: Install Missing Packages
 
 ```powershell
 pip install numpy pandas kafka-python pymongo fastapi uvicorn pydantic requests schedule pyyaml python-dotenv
@@ -30,7 +30,7 @@ pip install numpy pandas kafka-python pymongo fastapi uvicorn pydantic requests 
 
 ---
 
-### Step 3: Start Docker Desktop ⚡
+### Step 3: Start Docker Desktop
 
 1. **Open Docker Desktop** from Windows Start Menu
 2. **Wait** until bottom-left shows green "Docker Desktop is running"
@@ -42,7 +42,7 @@ pip install numpy pandas kafka-python pymongo fastapi uvicorn pydantic requests 
 
 ---
 
-### Step 4: Install MongoDB ⚡
+### Step 4: Install MongoDB
 
 **EASIEST: Use Docker**
 
@@ -73,7 +73,7 @@ mongosh
 
 ---
 
-### Step 5: Reprocess Data ⚡
+### Step 5: Reprocess Data
 
 ```powershell
 # Delete old files
@@ -130,7 +130,7 @@ python -c "import pymongo, kafka, pandas, numpy, fastapi; print('✓ All package
 
 ---
 
-## 🎯 NOW START THE PIPELINE
+## NOW START THE PIPELINE
 
 ### Terminal 1: Start Kafka
 
@@ -193,7 +193,7 @@ Message #10
 
 ---
 
-## 🌐 URLs That Should Work
+## URLs That Should Work
 
 After all services are running:
 
@@ -205,7 +205,7 @@ After all services are running:
 
 ---
 
-## 🐛 Still Not Working?
+## Still Not Working?
 
 ### Error: "Docker daemon not running"
 
@@ -268,7 +268,7 @@ If you're still stuck, share:
 
 ---
 
-## ⚡ TL;DR - Fastest Fix
+## TL;DR - Fastest Fix
 
 ```powershell
 # Run this one script

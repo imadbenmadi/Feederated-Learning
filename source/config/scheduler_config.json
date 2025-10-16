@@ -1,8 +1,10 @@
 {
-    "global_update_interval_minutes": 30,
+    "global_update_interval_minutes": 1,
+    "local_training_interval_seconds": 30,
+    "min_devices_for_aggregation": 3,
     "auto_aggregation": {
         "enabled": true,
-        "threshold": 5,
+        "threshold": 3,
         "strategy": "fedavg"
     },
     "backup": {

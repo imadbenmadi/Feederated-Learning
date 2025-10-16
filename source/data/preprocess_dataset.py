@@ -16,9 +16,10 @@ def load_raw_data(raw_file_path):
     print(f"Loading raw data from {raw_file_path}...")
     
     try:
-        # Read CSV with appropriate column names
-        df = pd.read_csv(raw_file_path, names=['date', 'time', 'epoch', 'device_id', 'temperature', 'humidity', 'light', 'voltage'], skiprows=1)
-        print(f"✓ Loaded {len(df)} records")
+        # Read CSV - it should have headers now
+        df = pd.read_csv(raw_file_path)
+        print(f"✓ Loaded {len(df)} records from CSV")
+        print(f"✓ Columns: {list(df.columns)}")
         return df
     except Exception as e:
         print(f"✗ Error loading data: {e}")

@@ -58,10 +58,34 @@ def convert_to_csv(input_file, output_file):
             line_count = 0
             for line in infile:
                 parts = line.strip().split()
+                # Intel Lab data has ONLY 6 columns: date time epoch device_id temperature humidity light voltage
+                # But actually it's: epoch device_id temperature humidity light voltage (6 columns)
+                # We need to parse the actual epoch as both date and time
                 if len(parts) >= 6:
-                    # Format: date time epoch device_id temperature humidity light voltage
-                    # The Intel Lab data format is: date time epoch moteid temperature humidity light voltage
-                    outfile.write(','.join(parts) + '\n')
+                    # Add placeholder date/time columns based on epoch
+                    # Format: date, time, epoch, device_id, temperature, humidity, light, voltage
+                    # The parts are: epoch(0), device_id(1), temp(2), humidity(3), light(4), voltage(5)
+                    epoch = parts[0]
+                    device_id = parts[1]
+                    temperature = parts[2]
+                    humidity = parts[3]
+                    light = parts[4]
+                    voltage = parts[5]
+                    
+                    # Convert epoch to date/time (Intel Lab base: 2004-02-28)
+                    from datetime import datetime, timedelta
+                    try:
+                        base_date = datetime(2004, 2, 28)
+                        dt = base_date + timedelta(seconds=int(float(epoch)))
+                        date_str = dt.strftime('%Y-%m-%d')
+                        time_str = dt.strftime('%H:%M:%S')
+                    except:
+                        date_str = '2004-02-28'
+                        time_str = '00:00:00'
+                    
+                    # Write CSV line
+                    csv_line = f"{date_str},{time_str},{epoch},{device_id},{temperature},{humidity},{light},{voltage}\n"
+                    outfile.write(csv_line)
                     line_count += 1
             
             print(f"✓ CSV file created: {output_file}")

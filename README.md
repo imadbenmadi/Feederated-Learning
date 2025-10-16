@@ -70,21 +70,19 @@ This project implements a complete IoT analytics pipeline with the following cap
 ### Data Flow
 
 ```
-IoT Devices (Simulated)
-    ↓
-Kafka Producer → iot_stream Topic
-    ↓
-Apache Flink (Per-Device Processing)
-    ↓
-Local Neural Networks → Global Model Server
-    ↓
-FedAvg Aggregation → Global Model
-    ↓
-Apache Spark (Batch & Streaming Analysis)
-    ↓
-MongoDB Storage
-    ↓
-Apache Superset (Visualization)
+IoT Data (152K records, loops forever)
+    ↓ 10 records/sec
+Kafka (iot_stream topic)
+    ↓ Real-time processing
+Flink (Per-device training every 30 sec)
+    ↓ Model updates
+Global Server (Aggregation every 1 minute)
+    ↓ Storage
+MongoDB (4 collections growing continuously)
+    ↓ Analytics
+Spark (Batch + Streaming)
+    ↓ Visualization
+Superset Dashboard
 ```
 
 ## Features

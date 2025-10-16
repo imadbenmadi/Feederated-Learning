@@ -24,7 +24,7 @@
     },
     "streaming": {
         "loop_dataset": true,
-        "records_per_second": 100,
+        "records_per_second": 10,
         "batch_size": 10
     }
 }

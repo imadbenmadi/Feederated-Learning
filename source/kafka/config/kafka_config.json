@@ -1,0 +1,30 @@
+{
+    "kafka": {
+        "bootstrap_servers": ["localhost:9092"],
+        "topics": {
+            "iot_stream": {
+                "name": "iot_stream",
+                "partitions": 3,
+                "replication_factor": 1
+            }
+        },
+        "producer": {
+            "acks": "all",
+            "retries": 3,
+            "batch_size": 16384,
+            "linger_ms": 10,
+            "buffer_memory": 33554432
+        },
+        "consumer": {
+            "group_id": "iot_analytics_group",
+            "auto_offset_reset": "earliest",
+            "enable_auto_commit": true,
+            "auto_commit_interval_ms": 1000
+        }
+    },
+    "streaming": {
+        "loop_dataset": true,
+        "records_per_second": 100,
+        "batch_size": 10
+    }
+}

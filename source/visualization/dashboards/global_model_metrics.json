@@ -1,0 +1,28 @@
+{
+    "dashboard_title": "Global Model Performance",
+    "description": "Metrics for the global federated model",
+    "charts": [
+        {
+            "title": "Aggregation Rounds Over Time",
+            "chart_type": "line",
+            "datasource": "global_model",
+            "metrics": ["aggregation_round"],
+            "dimensions": ["timestamp"]
+        },
+        {
+            "title": "Device Contributions",
+            "chart_type": "pie",
+            "datasource": "global_model",
+            "metrics": ["num_devices"],
+            "dimensions": ["device_ids"]
+        },
+        {
+            "title": "Global Model MSE",
+            "chart_type": "line",
+            "datasource": "predictions",
+            "metrics": ["avg(mse)"],
+            "dimensions": ["timestamp"],
+            "aggregation": "mean"
+        }
+    ]
+}

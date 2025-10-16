@@ -1,0 +1,16 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8000
+    },
+    "aggregation": {
+        "strategy": "fedavg",
+        "auto_aggregate_threshold": 5,
+        "manual_mode": false
+    },
+    "model_storage": {
+        "path": "../models/global_model/global_model_weights.pkl",
+        "backup_enabled": true,
+        "backup_interval_hours": 6
+    }
+}

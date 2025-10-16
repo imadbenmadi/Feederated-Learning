@@ -1,0 +1,34 @@
+{
+    "bsonType": "object",
+    "required": ["device_id", "timestamp", "prediction_type", "actual", "predicted"],
+    "properties": {
+        "device_id": {
+            "bsonType": "string",
+            "description": "Device identifier"
+        },
+        "timestamp": {
+            "bsonType": "string",
+            "description": "Prediction timestamp"
+        },
+        "prediction_type": {
+            "enum": ["batch", "streaming"],
+            "description": "Type of prediction"
+        },
+        "actual": {
+            "bsonType": "object",
+            "description": "Actual sensor values"
+        },
+        "predicted": {
+            "bsonType": "object",
+            "description": "Predicted sensor values"
+        },
+        "error_metrics": {
+            "bsonType": "object",
+            "description": "Error metrics (MSE, MAE, etc.)"
+        },
+        "is_anomaly": {
+            "bsonType": "bool",
+            "description": "Whether prediction indicates anomaly"
+        }
+    }
+}

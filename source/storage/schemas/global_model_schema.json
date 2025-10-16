@@ -1,0 +1,33 @@
+{
+    "bsonType": "object",
+    "required": ["aggregation_round", "timestamp", "weights"],
+    "properties": {
+        "aggregation_round": {
+            "bsonType": "int",
+            "description": "Aggregation round number"
+        },
+        "timestamp": {
+            "bsonType": "string",
+            "description": "Aggregation timestamp"
+        },
+        "weights": {
+            "bsonType": "object",
+            "description": "Aggregated model weights"
+        },
+        "num_devices": {
+            "bsonType": "int",
+            "description": "Number of devices contributed"
+        },
+        "device_ids": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            },
+            "description": "List of contributing devices"
+        },
+        "total_samples": {
+            "bsonType": "int",
+            "description": "Total training samples"
+        }
+    }
+}

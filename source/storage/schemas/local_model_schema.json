@@ -1,0 +1,26 @@
+{
+    "bsonType": "object",
+    "required": ["device_id", "timestamp", "weights"],
+    "properties": {
+        "device_id": {
+            "bsonType": "string",
+            "description": "Device identifier"
+        },
+        "timestamp": {
+            "bsonType": "string",
+            "description": "Update timestamp"
+        },
+        "weights": {
+            "bsonType": "object",
+            "description": "Model weights and architecture"
+        },
+        "sample_count": {
+            "bsonType": "int",
+            "description": "Number of samples used for training"
+        },
+        "loss": {
+            "bsonType": "double",
+            "description": "Training loss"
+        }
+    }
+}

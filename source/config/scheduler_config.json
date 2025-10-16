@@ -1,0 +1,17 @@
+{
+    "global_update_interval_minutes": 30,
+    "auto_aggregation": {
+        "enabled": true,
+        "threshold": 5,
+        "strategy": "fedavg"
+    },
+    "backup": {
+        "enabled": true,
+        "interval_hours": 6,
+        "max_backups": 10
+    },
+    "scheduler": {
+        "run_on_startup": true,
+        "timezone": "UTC"
+    }
+}

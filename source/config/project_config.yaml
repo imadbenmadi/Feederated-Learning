@@ -1,0 +1,69 @@
+# Project Configuration
+project:
+  name: "IoT-Streaming-Federated-Learning"
+  version: "1.0.0"
+  description: "Real-time IoT data streaming with federated learning"
+
+# Data Processing
+data:
+  raw_path: "./data/raw"
+  processed_path: "./data/processed"
+  dataset_url: "http://db.csail.mit.edu/labdata/data.txt"
+
+# Kafka Configuration
+kafka:
+  bootstrap_servers: "localhost:9092"
+  topic: "iot_stream"
+  partitions: 3
+  replication_factor: 1
+
+# Flink Configuration
+flink:
+  parallelism: 3
+  checkpoint_interval: 60000
+  state_backend: "rocksdb"
+
+# Model Configuration
+models:
+  local:
+    input_size: 4
+    hidden_sizes: [16, 8]
+    output_size: 4
+    learning_rate: 0.01
+    update_frequency: 100
+  global:
+    aggregation_strategy: "fedavg"
+    update_interval_minutes: 30
+    auto_aggregate_threshold: 5
+
+# MongoDB Configuration
+mongodb:
+  uri: "mongodb://localhost:27017/"
+  database: "iot_analytics"
+  collections:
+    - "device_data"
+    - "local_models"
+    - "global_model"
+    - "predictions"
+
+# Spark Configuration
+spark:
+  app_name: "IoT Analytics"
+  master: "local[*]"
+  batch_size: 10000
+
+# Superset Configuration
+superset:
+  port: 8088
+  secret_key: "your-secret-key-here"
+
+# Global Server Configuration
+global_server:
+  host: "0.0.0.0"
+  port: 8000
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "./logs/pipeline.log"

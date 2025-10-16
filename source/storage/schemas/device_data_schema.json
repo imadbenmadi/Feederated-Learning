@@ -1,0 +1,40 @@
+{
+    "bsonType": "object",
+    "required": ["device_id", "timestamp", "sensors"],
+    "properties": {
+        "device_id": {
+            "bsonType": "string",
+            "description": "Unique device identifier"
+        },
+        "timestamp": {
+            "bsonType": "string",
+            "description": "ISO format timestamp"
+        },
+        "sensors": {
+            "bsonType": "object",
+            "required": ["temperature", "humidity", "light", "voltage"],
+            "properties": {
+                "temperature": {
+                    "bsonType": "double",
+                    "description": "Temperature in Celsius"
+                },
+                "humidity": {
+                    "bsonType": "double",
+                    "description": "Humidity percentage"
+                },
+                "light": {
+                    "bsonType": "double",
+                    "description": "Light intensity in lux"
+                },
+                "voltage": {
+                    "bsonType": "double",
+                    "description": "Voltage reading"
+                }
+            }
+        },
+        "metadata": {
+            "bsonType": "object",
+            "description": "Additional metadata"
+        }
+    }
+}

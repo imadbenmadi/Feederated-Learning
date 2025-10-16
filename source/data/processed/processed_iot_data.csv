@@ -1,0 +1,1 @@
+date,time,epoch,device_id,temperature,humidity,light,voltage,datetime,hour,day_of_week,temp_rolling_mean,temp_rolling_std

@@ -1,0 +1,18 @@
+{
+    "paths": {
+        "project_root": ".",
+        "data": "./data",
+        "data_raw": "./data/raw",
+        "data_processed": "./data/processed",
+        "models": "./models",
+        "models_local": "./models/local",
+        "models_global": "./models/global_model",
+        "logs": "./logs",
+        "config": "./config"
+    },
+    "files": {
+        "raw_dataset": "./data/raw/intel_lab_data.csv",
+        "processed_dataset": "./data/processed/processed_iot_data.csv",
+        "global_model": "./models/global_model/global_model_weights.pkl"
+    }
+}

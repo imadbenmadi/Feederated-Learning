@@ -1,0 +1,17 @@
+{
+    "mongodb": {
+        "uri": "mongodb://localhost:27017/",
+        "database": "iot_analytics",
+        "collections": {
+            "device_data": "device_data",
+            "local_models": "local_models",
+            "global_model": "global_model",
+            "predictions": "predictions"
+        }
+    },
+    "connection": {
+        "timeout_ms": 5000,
+        "max_pool_size": 50,
+        "min_pool_size": 10
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "dashboard_title": "Per-Device Analytics",
+    "description": "Device-specific sensor readings and predictions",
+    "charts": [
+        {
+            "title": "Device Temperature Trends",
+            "chart_type": "line",
+            "datasource": "device_data",
+            "metrics": ["temperature"],
+            "dimensions": ["timestamp", "device_id"]
+        },
+        {
+            "title": "Prediction Accuracy by Device",
+            "chart_type": "bar",
+            "datasource": "predictions",
+            "metrics": ["mse", "mae"],
+            "dimensions": ["device_id"]
+        },
+        {
+            "title": "Anomaly Detection",
+            "chart_type": "scatter",
+            "datasource": "predictions",
+            "metrics": ["mse"],
+            "dimensions": ["device_id", "timestamp"],
+            "filters": {"is_anomaly": true}
+        }
+    ]
+}
